@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js7-mad-metrics</title>
+	<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+	<div class="page">
+	<!-- <div class="top-margin"></div> -->
+		<header class="main-header">
+			<div class="title-container">
+				<h2 class="title">My Website</h2>
+			</div>
+			<div class="links-toolbar">
+				<div class="links-container">
+					<a href="#" class="links links-top">Home</a>
+					<a href="#" class="links links-top">All Posts</a>
+					<a href="#" class="links links-top">About</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="menu-free-right">
+				<ul class="unstyled-list">
+					<li style="text-align:center"><b>Reports</b></li>
+					<li style="text-align:center"><button id="alert-metrics">Alert Metrics</button></li>
+					<li style="text-align:center"><button id="display-metrics">Display Metrics</button></li>
+					<li style="text-align:center"><button id="heatmap-metrics">Display Heatmap</button></li>
+					<li><h3 id="pp" style="text-align:center"></h3>
+				</ul>
+			</div>
+			<div class="all-articles">
+					<article>
+						<h3 class="article-title">Article Title</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean gravida in leo quis tempor.</p>
+						<p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing</b> elit. Quisque vestibulum congue eros, sed lobortis odio viverra nec. Etiam faucibus, sem a pharetra dictum, velit diam commodo eros, vitae aliquam ipsum dui a purus. Ut eleifend, <font class="font-crazy"> urna tristique convallis</font> porta, libero ligula consectetur lorem, a tempor tellus diam et enim. Suspendisse condimentum pulvinar pharetra.</p>
+						<section>
+							<h4 class="section-title">Section Title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							<table class="table"><tbody>
+								<tr>
+									<th>What</th>
+									<th>Where</th>
+									<th>How</th>
+								</tr>
+								<tr>
+									<td>HTML</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lo</td>
+									<td><button class="button">Go!</button></td>
+								</tr>
+								<tr>
+									<td>CSS</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae</td>
+									<td><button class="button">Try!</button></td>
+								</tr>
+								<tr>
+									<td>JS</td>
+									<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+									<td><button class="button">View!</button></td>
+								</tr>
+							</tbody></table>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						</section>
+						<section>
+							<h4 class="section-title">Section Title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							<pre>
+								<code>
+									
+$('#myElement').click(function()){
+	console.log('Clicked!')
+});
+									
+								</code>
+							</pre>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+						</section>
+						<section>
+							<h4 class="section-title">Section Title</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in, lobortis dui. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							<div class="image-container">
+								<img src="http://placehold.it/350x150">
+							</div>
+							<ol class="ordered-list">
+								<li><p class="list-paragraph"><b>Create Html:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in,</p></li>
+								<li><p class="list-paragraph"><b>Make Pretty with CSS:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in,</p></li>
+								<li><p class="list-paragraph"><b>Profit:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non sem ultrices, posuere felis vitae, sodales sem. Ut eget lorem adipiscing, viverra enim in,</p></li>
+							</ol>
+						</section>
+					</article>
+
+
+					
+
+			</div>
+		</main>
+		<footer class="main-footer">
+			<div class="comments-section">
+				<h3 class="article-title">Comments</h3>
+					<fieldset class="fieldset-fancy">
+					    <legend class="comment-sec">User Info</legend>
+					    <div class="info-item">
+					    	<div class="info-item-label">
+					    	  <label for="email">Email</label>
+				    	  </div>
+				    	  <div class="info-item-input">
+				    	  	<input type="text" class="input-text" />
+			    	  	</div>
+		    	  	</div>
+		    	  	<div class="info-item">
+					    	<div class="info-item-label">
+					    	  <label for="email">Display Name</label>
+				    	  </div>
+				    	  <div class="info-item-input">
+				    	  	<input type="text" class="input-text" />
+			    	  	</div>
+		    	  	</div>
+		    	  	<div class="info-item">
+					    	<div class="info-item-label">
+					    	  <label for="email">Website</label>
+				    	  </div>
+				    	  <div class="info-item-input">
+				    	  	<input type="text" class="input-text" />
+			    	  	</div>
+		    	  	</div>
+ 
+					</fieldset>
+					<fieldset class="fieldset-fancy">
+					    <legend class="comment-sec">Comment</legend>
+					    <div class="image-container">
+					    <input type="textarea" id="comment" class="comment-box" name="comment" />
+					    
+					    <input type="submit" class="submit-button" />
+					    </div>
+					</fieldset>
+					<ul class="post-list">
+						<li class="post">
+							<div class="post-content">
+								<div class="media-block-img">
+						    	<img src="http://placehold.it/50x50">
+						    </div>
+					    	<div class="media-block-txt">
+						    	<h5 class="user-name">User 2</h5>
+						    	<p class="date-format">January 15, 2014</p>
+					    	</div>
+					    	<div class="user-comment-wrapper">
+					    		<p class="user-comment-txt">Cupcake ipsum dolor sit amet gummies lemon drops pastry topping wypas jujubes gummi bears. Cotton candy powder topping bear claw halvah jelly beans bear claw. Chocolate cake ice cream gummies apple pie muffin wafer gummi bears.</p>
+				    		</div>
+			    		</div>
+			    		<ul class="post-children">
+			    			<li class="post">
+									<div class="post-content">
+										<div class="media-block-img">
+								    	<img src="http://placehold.it/50x50">
+								    </div>
+							    	<div class="media-block-txt">
+								    	<h5 class="user-name">User 3</h5>
+								    	<p class="date-format">January 15, 2014</p>
+							    	</div>
+							    	<div class="user-comment-wrapper">
+							    		<p class="user-comment-txt">Cupcake ipsum dolor sit amet gummies lemon drops pastry topping wypas jujubes gummi bears. Cotton candy powder topping bear claw halvah jelly beans bear claw. Chocolate cake ice cream gummies apple pie muffin wafer gummi bears.</p>
+						    		</div>
+				    			</div>
+			    			</li>
+			    			<li class="post">
+									<div class="post-content">
+										<div class="media-block-img">
+								    	<img src="http://placehold.it/50x50">
+								    </div>
+							    	<div class="media-block-txt">
+								    	<h5 class="user-name">User 4</h5>
+								    	<p class="date-format">January 15, 2014</p>
+							    	</div>
+							    	<div class="user-comment-wrapper">
+							    		<p class="user-comment-txt">Cupcake ipsum dolor sit amet gummies lemon drops pastry topping wypas jujubes gummi bears. Cotton candy powder topping bear claw halvah jelly beans bear claw. Chocolate cake ice cream gummies apple pie muffin wafer gummi bears.</p>
+						    		</div>
+				    			</div>
+				    			<ul class="post-children">
+					    			<li class="post">
+											<div class="post-content">
+												<div class="media-block-img">
+										    	<img src="http://placehold.it/50x50">
+										    </div>
+									    	<div class="media-block-txt">
+										    	<h5 class="user-name">User 5</h5>
+										    	<p class="date-format">January 15, 2014</p>
+									    	</div>
+									    	<div class="user-comment-wrapper">
+									    		<p class="user-comment-txt">Cupcake ipsum dolor sit amet gummies lemon drops pastry topping wypas jujubes gummi bears. Cotton candy powder topping bear claw halvah jelly beans bear claw. Chocolate cake ice cream gummies apple pie muffin wafer gummi bears.</p>
+								    		</div>
+						    			</div>
+					    			</li>
+				    			</ul>
+			    			</li>
+			    				
+		    			</ul>
+	    			</li>
+		    			<li class="post">
+									<div class="post-content">
+										<div class="media-block-img">
+								    	<img src="http://placehold.it/50x50">
+								    </div>
+							    	<div class="media-block-txt">
+								    	<h5 class="user-name">User 7</h5>
+								    	<p class="date-format">January 15, 2014</p>
+							    	</div>
+							    	<div class="user-comment-wrapper">
+							    		<p class="user-comment-txt">Cupcake ipsum dolor sit amet gummies lemon drops pastry topping wypas jujubes gummi bears. Cotton candy powder topping bear claw halvah jelly beans bear claw. Chocolate cake ice cream gummies apple pie muffin wafer gummi bears.</p>
+						    		</div>
+				    			</div>
+		    			</li>
+    			</ul>
+
+				    
+		  button id="alert-metrics"<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
