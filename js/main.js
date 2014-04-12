@@ -6,10 +6,10 @@ $(document).on('ready', function() {
     var $document = $(document);
     var windowHeight = $window.height();
     var documentHeight = $document.height();
-    var percentageFromTop = Math.ceil(((windowHeight / documentHeight) * 100));
-    $('#pp').text(percentageFromTop + "%");
+    var percentageViewed = Math.ceil(((windowHeight / documentHeight) * 100));
+    $('#pp').text(percentageViewed + "%");
     var lastScrollTop = $window.scrollTop();
-    var totalScroll = 0;
+    var totalScrolled = 0;
     var startTime = new Date();
     var sections = [];
     var totalSections = 6;
@@ -33,9 +33,30 @@ $(document).on('ready', function() {
         addDistanceScrolled();
         $('#pp').text(getPercentageFromTop(this) + "%");
         lastScrollTop = $(this).scrollTop();
-        getSection();
+        // getSection();
         drawRedCenterLine();
+        setPercentViewed(getPercentageFromTop(this))
     });
+
+    $('#alert-metrics').on('click', function() {
+        var alertMessage = "Percent Page Viewed: " + percentageViewed +
+            "\nTotal Distance(px) Scrolled: " + totalScrolled +
+            "\nTime spent on page(s): " + ((new Date() - startTime) / 1000);
+        for (var i = 0; i < totalSections; i++) {
+            alertMessage = alertMessage.concat("\nTime Spent in Section-" + (i + 1) + "(s): " + sections[i]['time']);
+        };
+        alert(alertMessage);
+    })
+
+    setInterval(function() {
+        sections[getSection()]['time']++
+    }, 1000);
+
+    var setPercentViewed = function(percent) {
+        if (percent > percentageViewed) {
+            percentageViewed = percent;
+        }
+    }
 
     var drawRedCenterLine = function() {
         var centerY = Math.ceil($(this).scrollTop() + ($(this).height() / 2));
@@ -54,7 +75,7 @@ $(document).on('ready', function() {
         var middleViewWindow = Math.ceil($(this).scrollTop() + ($(this).height() / 2));
         for (var i = 0; i < sections.length; i++) {
             if (middleViewWindow >= sections[i]['pxTop'] && middleViewWindow <= sections[i]['pxBottom']) {
-                console.log('Currently in:', sections[i]['section']);
+                return i;
             };
         };
     };
@@ -70,7 +91,7 @@ $(document).on('ready', function() {
     var addDistanceScrolled = function() {
         var currentScrollTop = $(this).scrollTop();
         var distance = currentScrollTop - lastScrollTop
-        totalScroll = totalScroll + Math.abs(distance);
+        totalScrolled = totalScrolled + Math.abs(distance);
 
         // console.log('total scrolled:', totalScroll, 'total distance:', Math.abs(distance));
     }
